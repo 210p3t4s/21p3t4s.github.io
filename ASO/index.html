@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+  <div class="nav">
+    <div class="logo">
+      <img src="hpCrew.png" alt="" srcset="" width="70px" height="70px" opacity = 0.5>
+    </div>
+  <div class="menu-container">
+    <div id="categorias">
+      <!-- Botones de categoría se generarán dinámicamente -->
+    </div>
+    <!-- Añade más elementos del menú según tus necesidades -->
+  
+  </div>
+  </div>
+  <div class="main">
+    <div class="left">
+      <div class="header-main">
+      </div>
+      <div class="product-list">
+        <div class="contenedor-lista">
+          <div id="detalle-carrito"></div>         
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="cuadricula">
+        <div class="grid-container">
+            <div id="carrito">
+              <h2>Carrito de compra</h2>
+              <ul id="lista-carrito"></ul>
+            </div>
+        </div>
+        <div>
+      </div>
+    </div>
+  </div>
+  <script>
+let categorias = ["Categoría 1", "Categoría 2", "Categoría 3","Categoría 4"];
+
+let productosPorCategoria = {
+  "Categoría 1": [
+    {
+      nombre: "Producto 1 (Categoría 1)",
+      precio: 10,
+      imagen: "ruta/de/la/imagen1.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 1)",
+      precio: 15,
+      imagen: "ruta/de/la/imagen2.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 1)",
+      precio: 15,
+      imagen: "ruta/de/la/imagen2.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 1)",
+      precio: 15,
+      imagen: "ruta/de/la/imagen2.jpg"
+    },
+    // Agrega más productos para la Categoría 1 según sea necesario
+  ],
+  "Categoría 2": [
+    {
+      nombre: "Producto 1 (Categoría 2)",
+      precio: 20,
+      imagen: "pAzul.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 2)",
+      precio: 25,
+      imagen: "ruta/de/la/imagen4.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 2)",
+      precio: 25,
+      imagen: "ruta/de/la/imagen4.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 2)",
+      precio: 25,
+      imagen: "ruta/de/la/imagen4.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 2)",
+      precio: 25,
+      imagen: "ruta/de/la/imagen4.jpg"
+    },
+    // Agrega más productos para la Categoría 2 según sea necesario
+  ],
+  "Categoría 3": [
+    {
+      nombre: "Producto 1 (Categoría 3)",
+      precio: 30,
+      imagen: "ruta/de/la/imagen5.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 3)",
+      precio: 35,
+      imagen: "ruta/de/la/imagen6.jpg"
+    },
+    {
+      nombre: "Producto 3 (Categoría 3)",
+      precio: 35,
+      imagen: "ruta/de/la/imagen6.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 3)",
+      precio: 35,
+      imagen: "ruta/de/la/imagen6.jpg"
+    },
+    // Agrega más productos para la Categoría 3 según sea necesario
+  ],
+  "Categoría 4": [
+    {
+      nombre: "Producto 1 (Categoría 4)",
+      precio: 30,
+      imagen: "ruta/de/la/imagen5.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 4)",
+      precio: 35,
+      imagen: "ruta/de/la/imagen6.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 4)",
+      precio: 35,
+      imagen: "ruta/de/la/imagen6.jpg"
+    },
+    {
+      nombre: "Producto 2 (Categoría 4)",
+      precio: 35,
+      imagen: "ruta/de/la/imagen6.jpg"
+    },
+    // Agrega más productos para la Categoría 3 según sea necesario
+  ]
+};
+
+let productosMostrados = [];
+
+function generarBotonesCategorias() {
+  const categoriasContainer = document.getElementById('categorias');
+  categorias.forEach(categoria => {
+    const botonCategoria = document.createElement('button');
+    botonCategoria.textContent = categoria;
+    botonCategoria.addEventListener('click', () => filtrarPorCategoria(categoria));
+    categoriasContainer.appendChild(botonCategoria);
+  });
+}
+
+function filtrarPorCategoria(categoriaSeleccionada) {
+  if (categoriaSeleccionada) {
+    productosMostrados = productosPorCategoria[categoriaSeleccionada];
+  } else {
+    productosMostrados = [];
+  }
+  mostrarProductos(productosMostrados);
+}
+
+function mostrarProductos(arrayProductos) {
+  const listaCarrito = document.getElementById('lista-carrito');
+  listaCarrito.innerHTML = '';
+
+
+  
+
+  arrayProductos.forEach(producto => {
+    const divProducto = document.createElement('div');
+    divProducto.classList.add('producto');
+
+    const imagen = document.createElement('img');
+    imagen.src = producto.imagen;
+    imagen.alt = producto.nombre;
+    imagen.classList.add('img-producto');
+    divProducto.appendChild(imagen);
+
+    const nombreProducto = document.createElement('span');
+    nombreProducto.textContent = producto.nombre;
+    divProducto.appendChild(nombreProducto);
+
+    const precioProducto = document.createElement('span');
+    precioProducto.textContent = `Precio: $${producto.precio}`;
+    divProducto.appendChild(precioProducto);
+
+    const botonAgregar = document.createElement('button');
+    botonAgregar.textContent = 'Agregar';
+    botonAgregar.addEventListener('click', () => agregarProductoDetalle(producto));
+    divProducto.appendChild(botonAgregar);
+
+    listaCarrito.appendChild(divProducto);
+  });
+}
+
+function agregarProductoDetalle(producto) {
+  const detalleCarrito = document.getElementById('detalle-carrito');
+  detalleCarrito.innerHTML = '';
+
+  const divProducto = document.createElement('div');
+  divProducto.classList.add('detalle-producto');
+
+  const imagenProducto = document.createElement('img');
+  imagenProducto.src = producto.imagen;
+  imagenProducto.alt = producto.nombre;
+  imagenProducto.classList.add('img-producto-grande');
+  divProducto.appendChild(imagenProducto);
+
+  const nombreProducto = document.createElement('span');
+  nombreProducto.textContent = `Producto: ${producto.nombre}`;
+  divProducto.appendChild(nombreProducto);
+
+  const precioProducto = document.createElement('span');
+  precioProducto.textContent = `Precio: $${producto.precio}`;
+  divProducto.appendChild(precioProducto);
+
+  detalleCarrito.appendChild(divProducto);
+}
+
+generarBotonesCategorias();
+
+mostrarProductos(productosMostrados);
+        </script>
+</main>
+</body>
+</html>
