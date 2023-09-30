@@ -1,0 +1,257 @@
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Futura', 'PT Sans', Verdana, sans-serif;
+    background-color: white;
+    color: white;
+  }
+
+  .about{
+    text-align: center;
+    align-items: center;
+    justify-content: end;
+    display: flex;
+    margin: 19px;
+    margin-top: 17px;
+    width: 40%;
+    color: white;
+  }
+  .nav{
+  display: flex;
+  color: black;
+  border-color: white;
+  border-radius: 10px;
+  height: 90px;
+  }
+   /* Estilo del contenedor del menú */
+    .menu-container {
+      margin-top:15px;
+      margin-left: 5px;
+      overflow-x: scroll;
+      white-space: nowrap;
+      height: 80px;
+      width: 62%;
+      
+    }
+    .menu-container.animacion {
+    animation: deslizar-animacion 2s infinite linear;
+  }
+  
+  @keyframes deslizar-animacion {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50px);
+    }
+  }
+   /* Estilo de los elementos del menú */
+   .menu-item {
+     display: inline-block;
+     padding: 20px;
+   }
+   .main{
+     border-radius: 50px;
+     width: 100%;
+     height: 85vh;
+     display: flex;
+   }
+   .left{
+   text-align: center;
+   width: 35%;
+   border-color: white;
+   border-radius: 10px;
+
+
+}
+
+
+   .right{
+    margin: 20px;
+    background-size: cover;
+     background-repeat: no-repeat;
+     background-image: url(goldCircleHP.png);
+     font-family: Futura, 'PT Sans', Verdana, sans-serif;
+    height: 100%;
+    width: 100%;
+   text-align: center;
+   border-color: white;
+   border-radius: 10px;
+}
+
+   .header-main{
+   align-items: center;
+   justify-content: center;
+
+   display: flex;
+   height: 10%;
+   background-color: none;
+
+   }
+   .product-list{
+   text-align: center;
+   height: 100%;
+   display: flex;
+   }
+   .logo{
+    margin-top:10px;
+    margin-left: 55px;
+    width: 8%;
+   }
+  .util{
+   width: 26%;
+   justify-content: end;
+   gap: 10px;
+   display: flex;
+  }
+  .header-left{
+   width: 50%;
+   justify-content: end;
+  }
+  .header-right{
+   width: 50%;
+   justify-content: flex-start;
+  }
+  .contenedor-lista{
+    margin: 20px;
+    border-radius: 10px;
+    border-color: black;
+    border-color: none;
+    width: 100%;
+
+  }
+  .divImagen{
+    height: 70%;
+    border-radius: 8px;
+  }
+
+  .divDescripcion{
+    padding-top: 20px;
+    height: 30%;  
+  }
+  .cuadricula{
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(
+        250px,
+        1fr
+      )
+      
+      );
+    gap: 80px;
+    }
+
+   .card {
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.5);   
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  }
+
+   .grid-item {
+     border-radius: 30px;
+     width: 100%;
+     height: 500px;
+     background-color: #1FBCFF;   
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+     padding: 50px;
+     text-align: center;
+     font-size: 30px;
+   }
+.producto{
+    width: 60px;
+    height: auto;
+}
+#carrito{
+    width: 100%;
+    height: 100%;
+    
+}
+#detalle-carrito{
+
+  margin-top: 50px;
+    height: 100%;
+}
+.detalle-producto{
+    height: 70%;
+    align-items: center;
+
+}
+#descripcion-producto{
+    align-items: center;
+    text-align: center;
+}
+   .img-producto{
+    object-fit: auto;
+    width: 160px;
+    height: 200px;
+}
+
+.img-producto-grande{
+  object-fit: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#lista-carrito {
+  display: flex;
+  flex-wrap: wrap;
+}
+#categorias{
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 10px;
+    
+}
+
+.producto {
+  margin-bottom: 30px;
+  margin-right: 110px;
+  width: 10%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .producto {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .producto {
+    width: 100%;
+  }
+}
+
+button {
+  color: black;
+    margin-right: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0px 0px -20px -20px;
+    cursor: pointer;
+    background-color: #ffffff;   
+    transition: all 0.2s ease-in-out 0ms;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  button:hover {
+    box-shadow: 0px 0px 20px -18px;
+    border-color: rgb(162, 130, 36);
+    background-color: rgba(43, 43, 43, 0.9);   
+    color: rgb(153, 135, 34);
+    transform: scale(1.09);
+
+  }
+  
+  button:active {
+    transform: scale(1.05);
+  }
+
+
+
