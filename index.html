@@ -3,32 +3,33 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  
   <title>Título de tu página</title>
 </head>
 <body>
   <main>
   <div class="nav">
     <div class="logo">
-      <img src="onubaLogo.PNG" alt="" srcset="" width="70px" height="70px">
+      <img src="onubaLogo.PNG" alt="" srcset="" width="90px" height="90px">
     </div>
-  <div class="menu-container">
-    <div id="categorias">
-      <!-- Botones de categoría se generarán dinámicamente -->
-    </div> 
-  </div>
   <div class="util">
 
-    <a href="tel:684347503">Llamanos</a>
-      <a href="tel:684347503">Llamanos</a>
-        <a href="tel:684347503">Llamanos</a>
-
+    <a href="tel:684347503" class="boton-telefono">
+      <i class="fas fa-phone"></i> Teléfono
+    </a>
+    <a href="mailto:arnauvn11@gmail.com" class="boton-telefono">
+      <i class="fas fa-phone"></i> Email
+    </a>
   </div>
   </div>
   <div class="main">
-    <class="right">
-     
-        <div class="grid-container">
-           </div>
+    <div class="right">
+      <div class="menu-container">
+        <div id="categorias">
+          <!-- Botones de categoría se generarán dinámicamente -->
+        </div> 
+      </div>
+           
             <div id="carrito">
               
 
@@ -47,107 +48,107 @@
     </div>-->
     
   <script>
-let categorias = ["Formato Pequeño", "Categoria 2", "Stickers", "Magazines & Books ", "Flyers", "Banners & Textiles", "Displays", "Promotional items"];
+let categorias = ["Formato Pequeño", "Carteles", "Stickers", "Magazines & Books ", "Flyers", "Banners & Textiles", "Displays", "Promotional items"];
 let productosPorCategoria = {
   "Formato Pequeño": [
     {
       nombre: "Archivadores",
-      imagen: "/fotos/FormatoPequeño/archivadores.jpg"
+      imagen: "/foto/archivadores.jpg"
     },
     {
       nombre: "Carpetas",
-      imagen: "/fotos/FormatoPequeño/Carpetas.jpg"
+      imagen: "/foto/Carpetas.jpg"
     },
     {
       nombre: "Dispensador de Tarjetas",
-      imagen: "/fotos/FormatoPequeño/dispensadorTarjetas.jpg"
+      imagen: "/foto/dispensadorTarjetas.jpg"
     },
     {
       nombre: "Etiquetas",
-      imagen: "/fotos/FormatoPequeño/Etiquetas.jpg"
+      imagen: "/foto/Etiquetas.jpg"
     },
     {
       nombre: "Expositores Publicitarios",
-      imagen: "/fotos/FormatoPequeño/expositoresPublicitarios.jpg"
+      imagen: "/foto/expositoresPublicitarios.jpg"
     },
     {
       nombre: "Folletos Flyers",
-      imagen: "/fotos/FormatoPequeño/folletosFlyers.jpg"
+      imagen: "/foto/folletosFlyers.jpg"
     },
     {
       nombre: "Folletos Plegable",
       precio: 10,
-      imagen: "/fotos/FormatoPequeño/folletosPlegables.jpg"
+      imagen: "/foto/folletosPlegables.jpg"
     },
     {
       nombre: "Forex",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/forex.jpg"
+      imagen: "/fotos/forex.jpg"
     },
     {
       nombre: "Formatos Personalizados",
       precio: 10,
-      imagen: "/fotos/FormatoPequeño/FormatosPersonalizados.jpg"
+      imagen: "/fotos/FormatosPersonalizados.jpg"
     },
     {
       nombre: "Hoja Máquina",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/hojaMaquina.jpg"
+      imagen: "/fotos/hojaMaquina.jpg"
     },
     {
       nombre: "Lonas PVC",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/lonasPC.jpg"
+      imagen: "/fotos/lonasPC.jpg"
     },
     {
       nombre: "Material Oficina",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/materialOficina.jpg"
+      imagen: "/fotos/materialOficina.jpg"
     },
     {
       nombre: "Muestrario Papeles",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/muestrarioPapeles.jpg"
+      imagen: "/fotos/muestrarioPapeles.jpg"
     },
     {
       nombre: "Pegatinas Bovina",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/pegatinasBovina.jpg"
+      imagen: "/fotos/pegatinasBovina.jpg"
     },
     {
       nombre: "Porta Folletos",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/portaFolletos.jpg"
+      imagen: "/fotos/portaFolletos.jpg"
     },
     {
       nombre: "Porta Tarjetas Metálico",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/portaTarjetasMetalico.jpg"
+      imagen: "/fotos/portaTarjetasMetalico.jpg"
     },
     {
       nombre: "Poster",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/poster.jpg"
+      imagen: "/fotos/poster.jpg"
     },
     {
       nombre: "Sobres",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/sobres.jpg"
+      imagen: "/fotos/sobres.jpg"
     },
     {
       nombre: "Tarjetas Empresariales",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/tarjetasEmpresarialesClasicas.jpg"
+      imagen: "/fotos/tarjetasEmpresarialesClasicas.jpg"
     },
     {
       nombre: "Tarjetas Invitaciones",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/TarjetasInvitaciones.jpg"
+      imagen: "/fotos/TarjetasInvitaciones.jpg"
     },
     {
       nombre: "Tarjetas Visita",
       precio: 15,
-      imagen: "/fotos/FormatoPequeño/tarjetasVisita.jpg"
+      imagen: "/fotos/tarjetasVisita.jpg"
     },
     // Agrega más productos para la Categoría 1 según sea necesario
     //
@@ -359,6 +360,7 @@ function generarBotonesCategorias() {
   const categoriasContainer = document.getElementById('categorias');
   categorias.forEach(categoria => {
     const botonCategoria = document.createElement('button');
+    botonCategoria.classList.add('boton-categoria')
     botonCategoria.textContent = categoria;
     botonCategoria.addEventListener('click', () => filtrarPorCategoria(categoria));
     categoriasContainer.appendChild(botonCategoria);
