@@ -78,7 +78,7 @@ body{
 
 
    .right{
-    margin-top: 130px;
+    margin-top: 120px;
     background-size: contain;
     background-repeat: no-repeat;
     height: 70%;
@@ -232,7 +232,7 @@ body{
     background-color: #ffffff; /* Color de fondo del botón */
     color: #000000; /* Color del texto */
     border-radius: 5px; /* Borde redondeado */
-  padding: 20px;
+  padding: 29px;
 }
 button {
   border: none;
