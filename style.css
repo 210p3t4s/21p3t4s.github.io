@@ -29,7 +29,6 @@ body{
   }
    /* Estilo del contenedor del menú */
     .menu-container {
-      position: fixed;
       background-color: rgb(255, 255, 255);
       overflow-x: scroll;
       white-space: nowrap;
@@ -79,7 +78,7 @@ body{
 
 
    .right{
-    margin-top: 100px;
+    margin-top: 130px;
     background-size: contain;
     background-repeat: no-repeat;
     height: 70%;
