@@ -18,6 +18,7 @@ body{
     color: white;
   }
   .nav{
+    z-index: 1;
     background-color: rgb(255, 255, 255);
     position:fixed;
   display: flex;
@@ -29,18 +30,18 @@ body{
   }
    /* Estilo del contenedor del menú */
     .menu-container {
+      position: absolute;
       background-color: rgb(255, 255, 255);
       overflow-x: scroll;
       white-space: nowrap;
-      height: 100px;
+      height: 120px;
       width: 100%;
       
     }
     .util{
-      width:10%;
+      width: 30%;
       display: flex;
       margin-top: 10px;
-      margin-right: 15px;
       align-items: center;
       
     }
@@ -168,10 +169,10 @@ body{
 
 #carrito{
   margin-left: auto;
-  margin-right: auto;
-  width: 93%;
-  margin-top: 60px;
-  height: 100%;
+    margin-right: auto;
+    width: 70%;
+  margin-top: 90px;
+    height: 100%;
     
 }
 #detalle-carrito{
@@ -206,14 +207,11 @@ body{
     gap: 10px;
     
 }
-.start{
-  color: black;
-}
 
 .producto {
   margin-bottom: 30px;
   margin-right: 180px;
-  width: 10px;
+  width: 25px;
   height: auto;
 }
 
@@ -226,14 +224,13 @@ body{
 .boton-producto{
   background-color: white;
   margin-right:  210px;
-  width: 80px;
+  width: 100px;
   height: auto;
 }
 .boton-categoria{
-  display: inline-flex;
+    display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #ffffff; /* Color de fondo del botón */
+    padding: 15px 35px;
     color: #000000; /* Color del texto */
     border-radius: 5px; /* Borde redondeado */
   padding: 29px;
@@ -241,7 +238,7 @@ body{
 button {
   border: none;
   background-color: white;
-  font-size: medium;
+  font-size: larger;
   color: black;
   margin-right: 10px;
 
@@ -249,7 +246,7 @@ button {
   .boton-telefono {
     display: inline-flex;
     align-items: center;
-    padding: 15px 20px;
+    padding: 15px 35px;
     background-color: #007bff; /* Color de fondo del botón */
     color: #fff; /* Color del texto */
     border-radius: 5px; /* Borde redondeado */
@@ -260,6 +257,12 @@ button {
     margin-right: 5px; /* Espacio entre el ícono y el texto */
   }
   
+  
+  
+  
+
+
+
   
   
   
