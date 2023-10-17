@@ -1,69 +1,596 @@
-let productos = [
-  {
-    nombre: "Producto 1",
-    precio: 10,
-    imagen: "pAzul.png"
-  },
-  {
-    nombre: "Producto 2",
-    precio: 15,
-    imagen: "pVerde.png"
-  },
-  // Agrega más objetos de productos según sea necesario
-];
+let categorias = ["Imprenta", "Carteles", "Pegatinas adhesivas", "Revistas, Libros y catálogos","Vinilos", "Packaging", "Bolsas", "Calendarios y Agendas", "Expositores"];
+let productosPorCategoria = {
+  "Imprenta": [
+     {
+      nombre: "Tarjetas Empresariales",
+      precio: 15,
+      imagen: "tarjetasEmpresarialesClasicas.jpg"
+    },
+    {
+      nombre: "Tarjetas Invitaciones",
+      precio: 15,
+      imagen: "TarjetasInvitaciones.jpg"
+    },
+    {
+      nombre: "Tarjetas Visita",
+      precio: 15,
+      imagen: "tarjetasVisita.jpg"
+    },
+    {
+      nombre: "Dispensador de Tarjetas",
+      imagen: "dispensadorTarjetas.jpg"
+    },
+    {
+      nombre: "Porta Folletos",
+      precio: 15,
+      imagen: "portaFolletos.jpg"
+    },
+    {
+      nombre: "Porta Tarjetas Metálico",
+      precio: 15,
+      imagen: "portaTarjetasMetalico.jpg"
+    },
+    {
+      nombre: "Poster",
+      imagen: "poster.jpg"
+    },
+    {
+      nombre: "Archivadores",
+      imagen: "archivadores.jpg"
+    },
+    {
+      nombre: "Carpetas",
+      imagen: "Carpetas.jpg"
+    },
+    {
+      nombre: "Etiquetas",
+      imagen: "Etiquetas.jpg"
+    },
+    {
+      nombre: "Expositores Publicitarios",
+      imagen: "expositoresPublicitarios.jpg"
+    },
+    {
+      nombre: "Folletos Flyers",
+      imagen: "folletosFlyers.jpg"
+    },
+    {
+      nombre: "Folletos Plegable",
+      precio: 10,
+      imagen: "folletosPlegables.jpg"
+    },
+    {
+      nombre: "Formatos Personalizados",
+      precio: 10,
+      imagen: "FormatosPersonalizados.jpg"
+    },
+    {
+      nombre: "Hoja Máquina",
+      precio: 15,
+      imagen: "hojaMaquina.jpg"
+    },
+    {
+      nombre: "Material Oficina",
+      precio: 15,
+      imagen: "materialOficina.jpg"
+    },
+    {
+      nombre: "Muestrario Papeles",
+      precio: 15,
+      imagen: "muestrarioPapeles.jpg"
+    },
+    {
+      nombre: "Sobres",
+      precio: 15,
+      imagen: "sobres.jpg"
+    },
+   
+    
+    // Agrega más productos para la Categoría 1 según sea necesario
+    //
+    //
+    //
+  ],
+  "Carteles": [
+     {
+      nombre: "Poster",
+      imagen: "poster.jpg"
+    },
+    {
+      nombre: "Valla publicitaria",
+      imagen: "vallaPublicitaria.jpg"
+    },
+    {
+      nombre: "Carteles",
+      imagen: "carteles.jpg"
+    },
+    {
+      nombre: "Poster Fotográfico",
+      imagen: "posterFotografico.jpg"
+    },
+    {
+      nombre: "Cartel Formato Personalizado",
+      imagen: "cartelFormatoPerso.jpg"
+    },
+    {
+      nombre: "Aluminio",
+      imagen: "aluminio.jpg"
+    },
+    {
+      nombre: "Plexiglas (Metacrilato)",
+      imagen: "plexiglasMetacrilato.jpg"
+    },
+    {
+      nombre: "Polipropileno",
+      imagen: "polipropileno.jpg"
+    },
+    {
+      nombre: "Carton",
+      imagen: "carton.jpg"
+    },
+    {
+      nombre: "Carton Pluma",
+      imagen: "cartonPluma.jpg"
+    },
+    {
+      nombre: "Placas",
+      imagen: "placas.jpg"
+    },
+    {
+      nombre: "Marco para Fotomatón",
+      imagen: "tarjetasVisita.jpg"
+    },
+    {
+      nombre: "Soporte Paneles",
+      imagen: "soportePaneles.jpg"
+    },
+    {
+      nombre: "Muestrario Papeles Rígidos",
+      imagen: "muestrarioPapelesRigidos.jpg"
+    },
+    {
+      nombre: "Carta Colores Materiales Rígidos",
+      imagen: "muestrarioPapelesRigidos.jpg"
+    }
+  
+  ],
+  "Pegatinas adhesivas": [
+    {
+      nombre: "Cinta Adhesiva",
+      imagen: "cintaAdhesiva.jpg"
+    },
+    {
+      nombre: "Rotulos Magnéticos",
+      imagen: "rotulosMagneticos.jpg"
+    },
+    {
+      nombre: "Muestra de Pegatinas",
+      imagen: "cintaAdhesivaPaquete.jpg"
+    },
+    {
+      nombre: "Adhesivos de Gran Formato",
+      imagen: "adhesivosGranFormato.jpg"
+    },
+    {
+      nombre: "Cinta Adhhesiva Paquetes",
+      imagen: "cintaAdhesivaPaquete.jpg"
+    },
+    {
+      nombre: "Pegatinas de etiquetado",
+      imagen: "pegatinasEtiquetado.jpg"
+    },
+    {
+      nombre: "Pegatinas Neutras",
+      imagen: "pegatinaNeutra.jpg"
+    },
+    {
+      nombre: "Pegatinas",
+      imagen: "pegatinas.jpg"
+    },
+    {
+      nombre: "Pegatinas de Bovina",
+      imagen: "pegatinasBovina.jpg"
+    }
+  ],
+  "Revistas, Libros y catálogos": [
+    {
+      nombre: "Revistas Premium",
+      imagen: "RevistasPremium.jpg"
+    },
+    {
+      nombre: "Revistas de Gran Tirada",
+      imagen: "revistasGranTirada.jpg"
+    },
+    {
+      nombre: "Revistas",
+      imagen: "revistas.jpg"
+    },
+    {
+      nombre: "Otros Formatos",
+      imagen: "otrosFormatos.jpg"
+    },
+    {
+      nombre: "Muestrario de Papeles",
+      imagen: "muestrarioDePapeles.jpg"
+    },
+    {
+      nombre: "Menus",
+      imagen: "menus.jpg"
+    },
+    {
+      nombre: "Marca Páginas",
+      imagen: "marcaPaginas.jpg"
+    },
+    {
+      nombre: "Manuales de Instrucciones",
+      imagen: "manualesInstrucciones.jpg"
+    },
+    {
+      nombre: "Libros",
+      imagen: "libros.jpg"
+    },
+    {
+      nombre: "Laminas sueltas",
+      imagen: "laminasSueltas.jpg"
+    },
+    {
+      nombre: "Folletos Plegables",
+      imagen: "folletosPlegables.jpg"
+    },
+    {
+      nombre: "Folletos",
+      imagen: "folletos.jpg"
+    },
+    {
+      nombre: "Expositor Porta-Revistas",
+      imagen: "expositorPortaRevistas.jpg"
+    },
+    {
+      nombre: "Encuadernación Premium Grapada",
+      imagen: "encuadernacionPremiumGrapada.jpg"
+    },
+    {
+      nombre: "Encuadernación Grapada",
+      imagen: "encuadernacionGrapada.jpg"
+    },
+    {
+      nombre: "Encuadernación Fresada",
+      imagen: "encuadernacionFresada.jpg"
+    },
+    {
+      nombre: "Encuadernacion con Espiral Mágnetica",
+      imagen: "encuadernacionEspiralMag.jpg"
+    },
+    {
+      nombre: "Encuadernación Cosida",
+      imagen: "encuadernacionCosida.jpg"
+    },
+    {
+      nombre: "Encuadernación Con Anillas de Gran Tirada",
+      imagen: "encuadernacionAnillasGranTiradda.jpg"
+    },
+    {
+      nombre: "Catálogos",
+      imagen: "catalogos.jpg"
+    }   
+  ],
+  "Packaging": [
+    {
+      nombre: "Packaging Alimentario",
+      imagen: "paca.jpg"
+    },
+    {
+      nombre: "Packaging de Carton",
+      imagen: "packagingCarton.jpg"
+    },
+    {
+      nombre: "Packaging Flexible",
+      imagen: "packagingFlexible.jpg"
+    },
+    {
+      nombre: "Packaging Botellas",
+      imagen: "packagingBotellas.jpg"
+    },
+    {
+      nombre: "Packaging Premium",
+      imagen: "packagingPremium.jpg"
+    },
+    {
+      nombre: "Packaging Envios",
+      imagen: "packagingEnvios.jpg"
+    },
+    {
+      nombre: "Packaging Tiendas",
+      imagen: "packagingTiendas.jpg"
+    },
+    {
+      nombre: "Packaging Fiestas",
+      imagen: "packagingFiestas.jpg"
+    },
+    {
+      nombre: "Packaging Comercio",
+      imagen: "packagingComercio.jpg"
+    },
+    {
+      nombre: "Packaging Ropa",
+      imagen: "packagingRopa.jpg"
+    },
+    {
+      nombre: "Packaging Regalos",
+      imagen: "packagingRegalos.jpg"
+    },
+    {
+      nombre: "Packaging Cosméticos",
+      imagen: "packagingCosmeticos.jpg"
+    },
+    {
+      nombre: "Packaging Joyas",
+      imagen: "packagingJoyas.jpg"
+    },
+  ],
+  "Bolsas": [
+    {
+      nombre: "Bolsasitas de Papel",
+      imagen: "bolsasPapel.jpg"
+    },
+    {
+      nombre: "Muestrario de Bolsas",
+      imagen: "muestrarioBolsas.jpg"
+    },
+    {
+      nombre: "Bolsa de Papel",
+      imagen: "bolsaPapelL.jpg"
+    },
+    {
+      nombre: "Bolsa de tela",
+      imagen: "bolsaTela.jpg"
+    }
+  ],
+  "Expositores": [
+    {
+      nombre: "Expositor Banner",
+      imagen: "expoBanner.jpg"
+    },
+    {
+      nombre: "Muebles Publicitarios",
+      imagen: "mueblesPublicitarios.jpg"
+    },
+    {
+      nombre: "Mostradores Profesionales",
+      imagen: "mostradoresProfesionales.jpg"
+    },
+    {
+      nombre: "ExpositoresExteriores",
+      imagen: "expositoresExteriores.jpg"
+    },
+    {
+      nombre: "Expositores",
+      imagen: "expositores.jpg"
+    },
+    {
+      nombre: "Marcos de Tela Tensada",
+      imagen: "marcosTelaTensada.jpg"
+    },
+    {
+      nombre: "Expositores de Mesa",
+      imagen: "expositoresMesa.jpg"
+    },
+    {
+      nombre: "Totems",
+      imagen: "Totems.jpg"
+    }
+    
+  ],
+  "Calendarios y Agendas": [
+    {
+      nombre: "Agenda Cosida",
+      imagen: "agendaCosida.jpg"
+    },
+    {
+      nombre: "Agenda Tapa Dura",
+      imagen: "agendaTapaDura.jpg"
+    },
+    {
+      nombre: "Planificadores",
+      imagen: "planificadores.jpg"
+    },
+    {
+      nombre: "Calendario de Mesa",
+      imagen: "calendarioMesa.jpg"
+    },
+    {
+      nombre: "Calendario Marca Páginas",
+      imagen: "calendarioMarcaPaginas.jpg"
+    },
+    {
+      nombre: "Calendario de Pared",
+      imagen: "calendarioParedd.jpg"
 
-function mostrarProductos() {
-  const listaCarrito = document.getElementById('contenedor-lista');
-  const detalleCarrito = document.getElementById('right');
-  listaCarrito.innerHTML = '';
-  detalleCarrito.innerHTML = '';
+    },
+  ],
+  "Vinilos": [
+    {
+      nombre: "Vinilo Adhesivo Corte",
+      imagen: "viniloAdhesivoCorte.jpg"
+    },
+    {
+      nombre: "Vinilo Adhesivo Suelo",
+      imagen: "viniloAdhesivoSuelo.jpg"
+    },
+    {
+      nombre: "Vinilos Electroestáticos Reposicionables",
+      imagen: "vinilosElectroestaticosReposicionables.jpg"
+    },
+    {
+      nombre: "Papel Pintado Pared",
+      imagen: "papelPintadoPared.jpg"
+    },
+    {
+      nombre: "Vinilo Escaparate",
+      imagen: "viniloEscaparate.jpg"
+    },
+    {
+      nombre: "Vinilo Superficie Plana",
+      imagen: "viniloSuperficiePlana.jpg"
+    },
+    {
+      nombre: "Vinilo Pared",
+      imagen: "viniloPared.jpg"
+    },
+    {
+      nombre: "Vinilos Adhesivos Coche",
+      imagen: "vinilosAdhesivosCoche.jpg"
+    }
+  ],
+  "Lonas": [
+    {
+      nombre: "Lona Antiviento",
+      imagen: "lonaAntiviento.jpg"
+    },
+    {
+      nombre: "Lona Display",
+      imagen: "lonaDisplay.jpg"
+    },
+    {
+      nombre: "Lona de doble cara",
+      imagen: "lonaDobleCara.jpg"
+    },
+    {
+      nombre: "Lona con Perforaciones",
+      imagen: "lonaPerforaciones.jpg"
+    },
+    {
+      nombre: "Lona Retroiluminable",
+      imagen: "lonaRetroiluminable.jpg"
+    },
+    {
+      nombre: "Lona sin PVC",
+      imagen: "lonaSinPVC.jpg"
+    },
+    {
+      nombre: "Lona de Tela",
+      imagen: "lonaTela.jpg"
+    }
+  ],
+};
 
-  productos.forEach(producto =>  {
-    const li = document.createElement('li');
-
-    const imagen = document.createElement('img');
-    imagen.src = producto.imagen;
-    imagen.alt = producto.nombre;
-    li.appendChild(imagen);
-
-    const nombreProducto = document.createElement('span');
-    nombreProducto.textContent = producto.nombre;
-    li.appendChild(nombreProducto);
-
-    const precioProducto = document.createElement('span');
-    precioProducto.textContent = `Precio: $${producto.precio}`;
-    li.appendChild(precioProducto);
-
-    const botonAgregar = document.createElement('button');
-    botonAgregar.textContent = 'Agregar';
-    botonAgregar.addEventListener('click', () => agregarProductoDetalle(producto, botonAgregar));
-    li.appendChild(botonAgregar);
-
-    listaCarrito.appendChild(li);
+// Función para generar botones de categorías
+function generarBotonesCategorias() {
+  // Obtenemos el contenedor de categorías del DOM
+  const categoriasContainer = document.getElementById('categorias');
+  // Iteramos sobre el array de categorías
+  categorias.forEach(categoria => {
+    // Creamos un nuevo botón para cada categoría
+    const botonCategoria = document.createElement('button');
+    // Añadimos la clase 'boton-categoria' al botón
+    botonCategoria.classList.add('boton-categoria')
+    botonCategoria.textContent = categoria;
+    // Añadimos un evento click al botón, que llama a la función filtrarPorCategoria con la categoría correspondiente
+    botonCategoria.addEventListener('click', () => filtrarPorCategoria(categoria));
+    // Añadimos el botón al contenedor de categorías
+    categoriasContainer.appendChild(botonCategoria);
   });
 }
 
-function agregarProductoDetalle(producto, boton) {
-  const detalleCarrito = document.getElementById('contenedor-lista');
+function filtrarPorCategoria(categoriaSeleccionada) {
+  if (categoriaSeleccionada) {
+    productosMostrados = productosPorCategoria[categoriaSeleccionada];
+  } else {
+    productosMostrados = [];
+  }
+  mostrarProductos(productosMostrados);
+}
+
+// Función para mostrar los productos
+function mostrarProductos(arrayProductos) {
+  // Obtenemos el elemento del DOM donde se mostrarán los productos
+  const listaCarrito = document.getElementById('lista-carrito');
+  
+  // Limpiamos el contenido actual de la lista de productos
+  listaCarrito.innerHTML = '';
+
+  // Iteramos sobre el array de productos
+  arrayProductos.forEach(producto => {
+    // Creamos un nuevo elemento div para cada producto
+    const divProducto = document.createElement('div');
+    // Añadimos la clase 'producto' al div
+    divProducto.classList.add('producto');
+
+    // Creamos un nuevo botón para cada producto
+    const botonAgregar = document.createElement('button');
+    // Añadimos la clase 'boton-producto' al botón
+    divProducto.classList.add('boton-producto');
+
+    // Creamos un nuevo elemento img para la imagen del producto
+    const imagen = document.createElement('img');
+    // Establecemos el src y el alt de la imagen
+    imagen.src = producto.imagen;
+    imagen.alt = producto.nombre;
+    // Añadimos la clase 'img-producto' a la imagen
+    imagen.classList.add('img-producto');
+    // Añadimos la imagen al botón
+    botonAgregar.appendChild(imagen);
+
+    // Creamos un nuevo elemento span para el nombre del producto
+    const nombreProducto = document.createElement('span');
+    // Establecemos el texto del span con el nombre del producto
+    nombreProducto.textContent = producto.nombre;
+    // Añadimos el nombre del producto al botón
+    botonAgregar.appendChild(nombreProducto);
+
+    // Añadimos un evento click al botón, que llama a la función agregarProductoDetalle
+    botonAgregar.addEventListener('click', () => agregarProductoDetalle(producto));
+    // Añadimos el botón al div del producto
+    divProducto.appendChild(botonAgregar);
+
+    // Añadimos el div del producto a la lista de productos
+    listaCarrito.appendChild(divProducto);
+  });
+}
+
+
+
+function agregarProductoDetalle(producto) {
+  const detalleCarrito = document.getElementById('detalle-carrito');
+  const descripcionProducto = document.getElementById('descripcion-producto');
+  const br = document.createElement('br');
+
+
+  detalleCarrito.innerHTML = '';
+  descripcionProducto.innerHTML = '';
 
   const divProducto = document.createElement('div');
-  
+  divProducto.classList.add('detalle-producto');
+
   const imagenProducto = document.createElement('img');
   imagenProducto.src = producto.imagen;
   imagenProducto.alt = producto.nombre;
+  imagenProducto.classList.add('img-producto-grande');
   divProducto.appendChild(imagenProducto);
 
   const nombreProducto = document.createElement('span');
   nombreProducto.textContent = `Producto: ${producto.nombre}`;
-  divProducto.appendChild(nombreProducto);
+  descripcionProducto.appendChild(nombreProducto);
+  descripcionProducto.appendChild(br);
 
   const precioProducto = document.createElement('span');
   precioProducto.textContent = `Precio: $${producto.precio}`;
-  divProducto.appendChild(precioProducto);
+  descripcionProducto.appendChild(precioProducto);
 
   detalleCarrito.appendChild(divProducto);
-
-  boton.disabled = true; // Deshabilitar el botón después de hacer clic
 }
 
-mostrarProductos();
+generarBotonesCategorias();
+
+let index = 0;
+const slides = document.querySelectorAll('#carousel .slide');
+
+function carousel() {
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length; // Vuelve al primer slide después del último
+  slides[index].classList.add('active');
+}
+
+setInterval(carousel, 2000); // Cambia el slide cada 2 segundos
+
+mostrarProductos(productosMostrados);
