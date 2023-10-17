@@ -7,6 +7,8 @@ body{
     margin: 0;
   }
 
+  
+
   .about{
     text-align: center;
     align-items: center;
@@ -18,23 +20,21 @@ body{
     color: white;
   }
   .nav{
-    z-index: 1;
-    background-color: rgb(255, 255, 255);
-    position:fixed;
+  background-color: rgb(255, 255, 255);
+  position:fixed;
   display: flex;
   color: black;
   border-color: white;
-  margin-left: 10px;
-  height: 120px;
+  height: 100px;
   width: 100%;
   }
    /* Estilo del contenedor del menú */
     .menu-container {
-      position: absolute;
       background-color: rgb(255, 255, 255);
       overflow-x: scroll;
+      overflow-y: hidden;
       white-space: nowrap;
-      height: 120px;
+      height: 100px;
       width: 100%;
       
     }
@@ -60,7 +60,7 @@ body{
    /* Estilo de los elementos del menú */
    .menu-item {
      display: inline-block;
-     padding: 20px;
+     padding: 10px;
    }
    .main{
     font-size: 25px;
@@ -80,7 +80,8 @@ body{
 
 
    .right{
-    margin-top: 110px;
+    overflow-x: hidden;
+    margin-top: 130px;
     background-size: contain;
     background-repeat: no-repeat;
     height: 70%;
@@ -104,11 +105,12 @@ body{
    display: flex;
    }
    .logo{
-    margin-top:20px;
-    margin-left: 10px;
+    margin-top:30px;
+    margin-left: 20px;
     width: 70%;
    }
   .util{
+  margin-right: 10px;
    width: 26%;
    justify-content: end;
    gap: 10px;
@@ -140,17 +142,7 @@ body{
     overflow-y: auto;
     height: 100%;
   }
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(
-        150px,
-        1fr
-      )
-      
-      );
-    }
+  
 
    .card {
     border-radius: 30px;
@@ -168,12 +160,13 @@ body{
    }
 
 #carrito{
+  align-items: center;
   margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-  margin-top: 120px;
-    height: 100%;
-    
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  color: black;
 }
 #detalle-carrito{
 
@@ -191,12 +184,49 @@ body{
 }
    .img-producto{
     object-fit: auto;
-    width: 260px;
-    height: 280px;
+    width: 360px;
+    height: 380px;
 }
 
+.sales{
+  color: black;
+  width: 100%;
+  margin-right: 10px;
+  height: 800px;
+}
+.slider{
+  width: 300px;
+  position: relative;
+  display: flex;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+}
+.slider img{
+   width: 100%;
+   left: 0;
+   position: sticky;
+   object-fit: cover;
+   border-radius: 10px;
+   scroll-snap-align: center;
 
+}
+.hero{
+  width: 100%;
+  background-color: red;
+  height: 50%;
+}
+.recomendados{
+  width: 100%;
+  background-color: yellow;  
+  min-height: 25%;
 
+}
+.seleccion{
+  width: 100%;
+  min-height: 25%;
+  background-color: #007bff;
+
+}
 #lista-carrito {
   display: flex;
   flex-wrap: wrap;
@@ -205,13 +235,14 @@ body{
     flex-wrap: wrap;
     padding: 15px;
     gap: 10px;
+    height: 99%;
     
 }
 
 .producto {
   margin-bottom: 30px;
   margin-right: 180px;
-  width: 25px;
+  width: 10px;
   height: auto;
 }
 
@@ -223,30 +254,32 @@ body{
 }
 .boton-producto{
   background-color: white;
-  margin-right:  210px;
-  width: 100px;
+  margin-right:  260px;
+  width: 80px;
   height: auto;
 }
 .boton-categoria{
-    display: inline-flex;
+  display: inline-flex;
     align-items: center;
-    padding: 15px 35px;
+    padding: 10px 20px;
+    background-color: #ffffff; /* Color de fondo del botón */
     color: #000000; /* Color del texto */
     border-radius: 5px; /* Borde redondeado */
-  padding: 29px;
+  padding: 19px;
 }
 button {
   border: none;
   background-color: white;
-  font-size: larger;
+  font-size: medium;
   color: black;
   margin-right: 10px;
 
   }
   .boton-telefono {
     display: inline-flex;
+    font-size: medium;
     align-items: center;
-    padding: 15px 35px;
+    padding: 10px 25px;
     background-color: #007bff; /* Color de fondo del botón */
     color: #fff; /* Color del texto */
     border-radius: 5px; /* Borde redondeado */
@@ -257,15 +290,3 @@ button {
     margin-right: 5px; /* Espacio entre el ícono y el texto */
   }
   
-  
-  
-  
-
-
-
-  
-  
-  
-
-
-
