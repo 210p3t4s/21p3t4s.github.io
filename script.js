@@ -582,15 +582,4 @@ function agregarProductoDetalle(producto) {
 
 generarBotonesCategorias();
 
-let index = 0;
-const slides = document.querySelectorAll('#carousel .slide');
-
-function carousel() {
-  slides[index].classList.remove('active');
-  index = (index + 1) % slides.length; // Vuelve al primer slide después del último
-  slides[index].classList.add('active');
-}
-
-setInterval(carousel, 2000); // Cambia el slide cada 2 segundos
-
 mostrarProductos(productosMostrados);
