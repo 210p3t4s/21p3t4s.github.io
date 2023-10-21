@@ -17,8 +17,8 @@
 @media screen and (max-width: 767px) {
   .sales img {
     background-size: cover;
-    width: 110%;
-    height: 110%;
+    width: 100%;
+    height: 70%;
   }
 }
 
