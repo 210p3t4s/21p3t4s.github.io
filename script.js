@@ -1,4 +1,4 @@
-let categorias = ["Imprenta", "Carteles", "Pegatinas adhesivas", "Revistas, Libros y catálogos","Vinilos", "Packaging", "Bolsas", "Calendarios y Agendas", "Expositores"];
+let categorias = ["Imprenta", "Materiales Rígidos", "Pegatinas adhesivas", "Revistas, Libros y catálogos","Vinilos", "Packaging", "Bolsas", "Calendarios y Agendas", "Expositores"];
 let productosPorCategoria = {
   "Imprenta": [
      {
@@ -30,9 +30,26 @@ let productosPorCategoria = {
       precio: 15,
       imagen: "portaTarjetasMetalico.jpg"
     },
-    {
+     {
       nombre: "Poster",
       imagen: "poster.jpg"
+    },
+    {
+      nombre: "Valla publicitaria",
+      imagen: "vallaPublicitaria.jpg"
+    },
+    {
+      nombre: "Carteles",
+      imagen: "carteles.jpg"
+    },
+    
+    {
+      nombre: "Poster Fotográfico",
+      imagen: "posterFotografico.jpg"
+    },
+    {
+      nombre: "Cartel Formato Personalizado",
+      imagen: "cartelFormatoPerso.jpg"
     },
     {
       nombre: "Archivadores",
@@ -73,12 +90,7 @@ let productosPorCategoria = {
       nombre: "Material Oficina",
       precio: 15,
       imagen: "materialOficina.jpg"
-    },
-    {
-      nombre: "Muestrario Papeles",
-      precio: 15,
-      imagen: "muestrarioPapeles.jpg"
-    },
+    }, 
     {
       nombre: "Sobres",
       precio: 15,
@@ -91,26 +103,10 @@ let productosPorCategoria = {
     //
     //
   ],
-  "Carteles": [
+  "Materiales Rígidos": [
      {
-      nombre: "Poster",
-      imagen: "poster.jpg"
-    },
-    {
-      nombre: "Valla publicitaria",
-      imagen: "vallaPublicitaria.jpg"
-    },
-    {
-      nombre: "Carteles",
-      imagen: "carteles.jpg"
-    },
-    {
-      nombre: "Poster Fotográfico",
-      imagen: "posterFotografico.jpg"
-    },
-    {
-      nombre: "Cartel Formato Personalizado",
-      imagen: "cartelFormatoPerso.jpg"
+      nombre: "Forex",
+      imagen: "forex.jpg"
     },
     {
       nombre: "Aluminio",
@@ -144,14 +140,7 @@ let productosPorCategoria = {
       nombre: "Soporte Paneles",
       imagen: "soportePaneles.jpg"
     },
-    {
-      nombre: "Muestrario Papeles Rígidos",
-      imagen: "muestrarioPapelesRigidos.jpg"
-    },
-    {
-      nombre: "Carta Colores Materiales Rígidos",
-      imagen: "muestrarioPapelesRigidos.jpg"
-    }
+    
   
   ],
   "Pegatinas adhesivas": [
@@ -164,16 +153,8 @@ let productosPorCategoria = {
       imagen: "rotulosMagneticos.jpg"
     },
     {
-      nombre: "Muestra de Pegatinas",
-      imagen: "cintaAdhesivaPaquete.jpg"
-    },
-    {
       nombre: "Adhesivos de Gran Formato",
       imagen: "adhesivosGranFormato.jpg"
-    },
-    {
-      nombre: "Cinta Adhhesiva Paquetes",
-      imagen: "cintaAdhesivaPaquete.jpg"
     },
     {
       nombre: "Pegatinas de etiquetado",
@@ -210,12 +191,32 @@ let productosPorCategoria = {
       imagen: "otrosFormatos.jpg"
     },
     {
-      nombre: "Muestrario de Papeles",
-      imagen: "muestrarioDePapeles.jpg"
-    },
-    {
       nombre: "Menus",
       imagen: "menus.jpg"
+    },
+    {
+      nombre: "Encuadernación Premium Grapada",
+      imagen: "encuadernacionPremiumGrapada.jpg"
+    },
+    {
+      nombre: "Encuadernación Grapada",
+      imagen: "encuadernacionGrapada.jpg"
+    },
+    {
+      nombre: "Encuadernación Fresada",
+      imagen: "encuadernacionFresada.jpg"
+    },
+    {
+      nombre: "Encuadernacion con Espiral Mágnetica",
+      imagen: "encuadernacionEspiralMag.jpg"
+    },
+    {
+      nombre: "Encuadernación Cosida",
+      imagen: "encuadernacionCosida.jpg"
+    },
+    {
+      nombre: "Encuadernación Con Anillas de Gran Tirada",
+      imagen: "encuadernacionAnillasGranTiradda.jpg"
     },
     {
       nombre: "Marca Páginas",
@@ -244,30 +245,6 @@ let productosPorCategoria = {
     {
       nombre: "Expositor Porta-Revistas",
       imagen: "expositorPortaRevistas.jpg"
-    },
-    {
-      nombre: "Encuadernación Premium Grapada",
-      imagen: "encuadernacionPremiumGrapada.jpg"
-    },
-    {
-      nombre: "Encuadernación Grapada",
-      imagen: "encuadernacionGrapada.jpg"
-    },
-    {
-      nombre: "Encuadernación Fresada",
-      imagen: "encuadernacionFresada.jpg"
-    },
-    {
-      nombre: "Encuadernacion con Espiral Mágnetica",
-      imagen: "encuadernacionEspiralMag.jpg"
-    },
-    {
-      nombre: "Encuadernación Cosida",
-      imagen: "encuadernacionCosida.jpg"
-    },
-    {
-      nombre: "Encuadernación Con Anillas de Gran Tirada",
-      imagen: "encuadernacionAnillasGranTiradda.jpg"
     },
     {
       nombre: "Catálogos",
@@ -473,6 +450,7 @@ let productosPorCategoria = {
     }
   ],
 };
+
 
 // Función para generar botones de categorías
 function generarBotonesCategorias() {
