@@ -189,7 +189,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 70px;
-  width: 100%;
+  width: 90%;
   height: 100%;
   overflow-x: hidden;
   display: flex;
@@ -207,8 +207,8 @@ body {
   text-align: center;
 }
 .img-producto {
-  object-fit: auto;
-  width: 160px;
+  background-size: cover;
+  width: 130px;
   margin: 30px;
   height: auto;
 }
@@ -236,6 +236,7 @@ body {
 #lista-carrito {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 #categorias {
   flex-wrap: wrap;
@@ -245,7 +246,7 @@ body {
 }
 
 .producto {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   height: auto;
 }
 
@@ -256,9 +257,9 @@ body {
 }
 .boton-producto {
   background-color: white;
-  width: 110px;
+  width: 4px;
   height: auto;
-  margin-right: 80px;
+  margin-right: 140px;
 }
 
 .categoria-seleccionada {
@@ -293,6 +294,10 @@ button {
   color: #fff; /* Color del texto */
   border-radius: 5px; /* Borde redondeado */
   text-decoration: none; /* Eliminar subrayado */
+}
+
+.boton-telefono i {
+  margin-right: 5px; /* Espacio entre el ícono y el texto */
 }
 
 .boton-telefono i {
